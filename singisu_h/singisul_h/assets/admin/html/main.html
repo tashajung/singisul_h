@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="description" content="신기술접수소" />
+	<meta name="keywords" content="신기술 접수소" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="신기술접수소 관리자사이트" />
+	<meta property="og:description" content="신기술접수소  관리자사이트" />
+	<title>신기술접수소</title>		
+	<link rel="stylesheet" href="../css/lib/solid.min.css" />
+	<link rel="stylesheet" href="../css/style.css" />	
+	<script src="../js/lib/jquery-3.6.0.min.js"></script>
+	<script src="../js/lib/all.min.js"></script>	
+</head>
+<body>
+	<!-- skip_nav --> 
+		<div id="skip_nav">  
+           <a href="#nav" title="메인메뉴 바로가기">메인메뉴 바로가기</a>
+           <a href="#section" title="본문내용 바로가기">본문내용 바로가기</a>
+		</div>
+	<!-- //skip_nav --> 
+		<!--popup-->
+	   <!-- 로그아웃 팝업 -->
+	    <div class="logout_popup_box popup_box">
+		   <div class="popup_bg"></div>
+		   <div class="logout_popup popup_contents">
+		       <div class="popup_titlebox clearfix">
+			       <h4 class="fl">로그 아웃</h4>
+			       <a href="javascript:void(0)" class="white_font close_btn logout_popup_close_btn popup_close_btn fr"><i class="fas fa-times"></i></a>
+			   </div>
+			   <div class="popup_txt_area">
+				   <p><span class="font_blue">로그아웃</span> 하시겠습니까?</p>				   
+			   </div>
+			   <div class="popup_button_area_center">
+				   <button type="button" class="blue_btn popup_close_btn" onclick="location.href='./login.html'">예</button>
+				   <button type="button" class="gray_btn logout_popup_close_btn popup_close_btn">아니요</button>
+			   </div>
+		   </div>
+	    </div>
+	    <!-- //로그아웃 팝업 -->
+
+		<div class="wrap">
+			<div class="wrapbox">
+				<!-- header -->
+				<header class="header">
+					<div class="header_top clearfix">
+						<div class="fl logo_box clearfix">
+						   <h1 class="header_site-logo fl">
+							   <a href="./index.html" title="신기술접수소 홈 이동" class="home_logo clearfix ir">
+								   <img class="fl" src="../images/admin_logo.png" alt="신기술접수소">
+								   신기술 접수소
+							   </a>
+						   </h1>                        
+						</div>
+						<div class="class_select_box fr clearfix pc_show">
+						   <span class="fl mt10 mr10 pt5"><span class="header_name">관리자</span>님 반갑습니다.</span>                     
+						   <a href="javascript:void(0)" title="로그아웃" class="login_icon logout fl mt10 ir"><span>로그아웃</span></a>                    
+						   <!--a href="#" title="로그인"  class="login_icon logout fl margint10 ir"><span>로그인</span></a-->                        
+						</div>
+					</div>
+					<!--pc 상단 메뉴-->
+					<nav class="nav pc_show" id="nav">
+						<ul class="clearfix">
+							<li><a href="./contents.html" title="콘텐츠관리"><i class="far fa-folder-open"></i>콘텐츠관리</a></li>
+							<li><a href="./notice.html" title="게시판관리"><i class="far fa-list-alt"></i>게시판관리</a></li>
+							<li><a href="./statistics.html" title="통계관리"><i class="fas fa-chart-bar"></i>통계관리</a></li>
+						</ul>                
+					</nav>
+					<!--//pc 상단 메뉴-->
+				</header>
+				<!--// header -->
+				<hr class="hidden">
+				
+				<!-- section -->
+				<section id="section" class="clearfix">
+					<article class="main_contents">
+						<h2><a href="./contents_main.html" class="title">콘텐츠관리</a></h2>					
+						<ul>
+							<li><a href="./contents_main.html">메인화면관리</a></li>
+							<li><a href="./contents_menu.html">메뉴관리</a></li>
+							<li><a href="./contents_page.html">페이지관리</a></li>
+							<li><a href="./contents_code.html">공통코드관리</a></li>
+						</ul>					
+					</article>
+					<article class="main_notice">
+						<h2><a href="./notice_board.html" class="title">게시판관리</a></h2>					
+						<ul>
+							<li><a href="./notice_board.html">공고및공지관리</a></li>
+							<li><a href="./notice_data.html">보도자료관리</a></li>
+							<li><a href="./notice_poster.html">포스터관리</a></li>
+							<li><a href="./notice_gallery.html">기술갤러리관리</a></li>
+							<li><a href="./notice_video.html">동영상관리</a></li>
+						</ul>					
+					</article>
+					<article class="main_graph">
+						<h2><a href="./statistics_visit.html" class="title">통계관리</a></h2>					
+						<ul>
+							<li><a href="./statistics_visit.html">방문자통계</a></li>
+							<li><a href="./statistics_online.html">온라인투표 집계</a></li>
+						</ul>					
+					</article>
+				</section>
+				<!--// section -->
+
+			</div>
+		</div>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="description" content="신기술접수소" />
+		<meta name="keywords" content="신기술 접수소" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="신기술접수소" />
+		<meta property="og:image" content="../../images/logo.png">
+		<meta property="og:url" content="">
+		<title>신기술접수소</title>		
+		<link rel="stylesheet" href="../../css/lib/solid.min.css" />		
+		<link rel="stylesheet" href="../../css/lib/swiper.min.css" />
+		<link rel="stylesheet" href="../../css/style.css" />	
+		<script src="../../js/lib/jquery-3.6.0.min.js"></script>
+		<script src="../../js/lib/all.min.js"></script>	
+		<script src="../../js/lib/swiper.min.js"></script>
+	
+	<style>
+	.gallery-slider{
+  position: relative;
+  width: 620px;
+  padding: 0 60px;
+  height: 345px;
+
+  .swiper {
+    &-container {
+      width: 100%;
+      height: 100%;
+    }
+    &-slide {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      &__bg-image{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+    }
+
+    &-button-next,
+    &-button-prev{
+      margin-top: -26px;
+    }
+
+    &-button-next{
+      right: 0;
+    }
+    &-button-prev{
+      left: 0;
+    }
+  }
+}
+
+
+
+// slider oklari
+.swiper{
+	&-pagination{
+		width: 100%;
+		font-size: 0;
+		bottom: 0;
+		&-bullet{
+			width: 6px;
+			height: 4px;
+			background-color: blue;
+			border-radius: 0;
+			opacity: 1;
+			&-active{
+				background-color: blue;
+			}
+		}
+	}
+
+	&-button-next,
+	&-button-prev{
+		z-index: 1;
+		width: 36px;
+		height: 52px;
+		background-color: blue;
+		background-size: 10px auto;
+		background-position: center center;
+		border: 1px solid #f00;
+		box-shadow: 0 1px 3px 0 blue;
+		transition: border-color 0.3s;
+
+		&.-dark{
+			background-color: #fff;
+			border: solid 1px blue;
+			box-shadow: 0 1px 1px 0 blue;
+			&:hover{
+				border-color: blue;
+			}
+		}
+
+		&:hover{
+			border-color: blue;
+		}
+	}
+
+
+
+	
+}
+	</style>
+</head>
+<body>
+	<div class="gallery-slider">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+     
+      <div class="swiper-slide">
+        <iframe id="player0" width="612" height="345" src="https://www.youtube.com/embed/V2cF4uE0mXs?enablejsapi=1&html5=1&rel=0" frameborder="0" allowfullscreen iframe-video></iframe>
+      </div>
+      
+      <div class="swiper-slide">
+        <iframe id="player1" width="612" height="345" src="https://www.youtube.com/embed/xvJRCI9ERsQ?enablejsapi=1&html5=1&rel=0" frameborder="0" allowfullscreen iframe-video></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Arrows -->
+  <div class="swiper-button-next -dark" video-buttons></div>
+  <div class="swiper-button-prev -dark" video-buttons></div>
+</div>
+<script>
+$(document).ready(function(){
+	  var youtubeSwiper = new Swiper('.swiper-container', {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        // function to stop youtube video on slidechange
+        on: {
+            slideChange: function (el) {
+              $('.swiper-slide').each(function () {
+                  var youtubePlayer = $(this).find('iframe').get(0);
+                  if (youtubePlayer) {
+                    youtubePlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                  }
+              });
+            },
+        },
+	  });
+});
+
+
+</script>
+</body>
+</html>

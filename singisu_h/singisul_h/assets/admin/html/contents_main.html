@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="description" content="신기술접수소" />
+		<meta name="keywords" content="신기술 접수소" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="신기술접수소 관리자사이트" />
+		<meta property="og:description" content="신기술접수소  관리자사이트" />
+		<title>신기술접수소</title>		
+		<link rel="stylesheet" href="../css/lib/solid.min.css" />
+		<link rel="stylesheet" href="../css/style.css" />	
+		<script src="../js/lib/jquery-3.6.0.min.js"></script>
+		<script src="../js/lib/all.min.js"></script>	
+	</head>
+	<body>
+		<!-- skip_nav --> 
+		<div id="skip_nav">  
+           <a href="#top_nav" title="메인메뉴 바로가기">메인메뉴 바로가기</a>
+           <a href="#content" title="본문내용 바로가기">본문내용 바로가기</a>
+		</div>
+		<!-- //skip_nav --> 
+
+		<!--popup-->
+	    <!-- 로그아웃 팝업 -->
+	    <div class="logout_popup_box popup_box">
+		   <div class="popup_bg"></div>
+		   <div class="logout_popup popup_contents">
+		       <div class="popup_titlebox clearfix">
+			       <h4 class="fl">로그 아웃</h4>
+			       <a href="javascript:void(0)" class="white_font close_btn logout_popup_close_btn popup_close_btn fr"><i class="fas fa-times"></i></a>
+			   </div>
+			   <div class="popup_txt_area">
+				   <p><span class="font_blue">로그아웃</span> 하시겠습니까?</p>				   
+			   </div>
+			   <div class="popup_button_area_center">
+				   <button type="button" class="blue_btn popup_close_btn" onclick="location.href='./login.html'">예</button>
+				   <button type="button" class="gray_btn logout_popup_close_btn popup_close_btn">아니요</button>
+			   </div>
+		   </div>
+	    </div>
+	    <!-- //로그아웃 팝업 -->
+
+		<div class="wrap">
+			
+			<!-- header -->
+			<header class="header">
+				<div class="header_top clearfix">
+					<div class="fl logo_box clearfix">
+					   <h1 class="header_site-logo fl">
+						   <a href="./index.html" title="신기술접수소 홈 이동" class="home_logo clearfix ir">
+							   <img class="fl" src="../images/admin_logo.png" alt="신기술접수소">
+							   신기술 접수소
+						   </a>
+					   </h1>                        
+					</div>
+					<div class="class_select_box fr clearfix pc_show">
+					   <span class="fl mt10 mr10 pt5"><span class="header_name">관리자</span>님 반갑습니다.</span>                     
+					   <a href="javascript:void(0)" title="로그아웃" class="login_icon logout fl mt10 ir"><span>로그아웃</span></a>                    
+					   <!--a href="#" title="로그인"  class="login_icon logout fl margint10 ir"><span>로그인</span></a-->                        
+					</div>
+				</div>
+				<!--pc 상단 메뉴-->
+				<nav class="nav pc_show" id="top_nav">
+					<ul class="clearfix">
+						<li><a href="./contents_main.html" title="콘텐츠관리"><i class="far fa-folder-open"></i>콘텐츠관리</a></li>
+						<li><a href="./notice_board.html" title="게시판관리"><i class="far fa-list-alt"></i>게시판관리</a></li>
+						<li><a href="./statistics_visit.html" title="통계관리"><i class="fas fa-chart-bar"></i>통계관리</a></li>
+					</ul>                
+				</nav>
+				<!--//pc 상단 메뉴-->
+			</header>
+			<!--// header -->
+			<hr class="hidden">		
+			
+			
+			<!-- section -->
+			<section id="content">	
+				<!-- left_menu -->
+				<nav id="left_menu">
+					<h2 class="left_menu_title"><i class="far fa-folder-open"></i>콘텐츠관리</h2>
+					<ul class="left_menu_link">
+						<li class="on"><a href="./contents_main.html">메인화면관리</a></li>
+						<li><a href="./contents_menu.html">메뉴관리</a></li>
+						<li><a href="./contents_page.html">페이지관리</a></li>
+						<li><a href="./contents_code.html">공통코드관리</a></li>
+					</ul>	
+				</nav>
+				<!-- //left_menu -->
+				
+				<!-- 서브컨텐츠 -->
+				<article class="contents sub_content">
+					<h3 class="sub_title">메인화면관리</h3>
+					<div class="allWrap clearfix">
+						<div class="tabBox">
+							<a href="#" class="tab-link current" data-tab="tab-1">메인화면</a>
+							<a href="#" class="tab-link"  data-tab="tab-2">팝업</a>
+					    </div>
+					    <div  id="tab-1" class="tab-content current clearfix">
+							<img src="../images/main.jpg" alt="신기술접수소 메인화면" class="main_img" />
+							<div class="main_img_info">
+								<div class="main_img_info_title clearfix">
+									<h4>사이트 구분</h4>
+									<select name="main_img_section" id="main_img_section" class="ace-select">
+										<option value="1">한글홈페이지</option>
+										<option value="2">영문홈페이지</option>
+									</select>
+								</div>
+								<table class="list2 main_img_section_table">
+									<caption>이메일</caption> 
+									<colgroup>
+									   <col style="width: 10%" />
+									   <col style="width: 50%" />
+									   <col style="width: 25%" />									   
+									   <col style="width: 25%" />
+									</colgroup>
+									<thead>
+										<th scope="col">No.</th>
+										<th scope="col">코드</th>
+										<th scope="col">메인화면</th>
+										<th scope="col">선택</th>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>ddeeeee393f939ff9f</td>
+											<td>Section A</td>
+											<td><input type="checkbox" /></td>
+										</tr>										   
+										<tr>
+											<td>2</td>
+											<td>ddeeeee393f939ff9f</td>
+											<td>Section B</td>
+											<td><input type="checkbox" /></td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>ddeeeee393f939ff9f</td>
+											<td>Section C</td>
+											<td><input type="checkbox" /></td>
+										</tr>											
+									</tbody>									   
+								</table>							
+								
+								<div class="clearfix button_area mt10">
+								   <button type="button" class="blue_btn fr main_info_modify">수정/편집</button>
+								</div>
+
+						    </div>
+					    </div>
+					    <!--// 메인화면 -->
+
+						<!-- 팝업 -->
+						<div id="tab-2" class="tab-content clearfix">
+							<div class="veiw_popup_notice">
+								<div class="veiw_popup_box">
+									<div class="veiw_popup_box_area">
+									    <div class="veiw_popup_titlebox">
+										   <h4>공지사항</h4>
+										   <!--<a href="javascript:void(0)" class="white_font close_btn fr"><i class="fas fa-times"></i></a>-->
+									    </div>
+										<div class="veiw_popup_txt_area">
+											<h5 class="veiw_popup_txt_title">팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목팝업 내용 제목제목팝업 내용 제목제목팝업 내용 제목</h5>
+										    <p class="veiw_popup_txt">팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용팝업 내용</p>				   
+										</div>
+									    <div class="veiw_popup_button_area_center">										  
+										    <button type="button" class="gray_btn popup_close_btn">닫기</button>
+									    </div>
+									</div>
+								</div>
+							</div>
+
+							<div class="main_popup_info">
+								<div class="main_popup_info_title clearfix">
+									<h4>팝업 구분</h4>
+									<select name="main_popup_section" id="main_popup_section" class="ace-select">
+										<option value="1">공지</option>										
+									</select>
+								</div>
+								<table class="list2 main_popup_section_table">
+									<caption>이메일</caption> 
+									<colgroup>
+									   <col style="width: 10%" />
+									   <col style="width: 40%" />
+									   <col style="width: 50%" />	
+									</colgroup>
+									<thead>
+										<th scope="col">순서</th>
+										<th scope="col">팝업번호</th>
+										<th scope="col">팝업제목</th>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td><button type="button" class="gray_btn2">ddeeeee393f939ff9f</button></td>
+											<td>2021년도 서울시 테스트베드 서울 실증지원 사업 공고</td>
+										</tr>										   
+										<tr>
+											<td>2</td>
+											<td><button type="button" class="gray_btn2">ddeeeee393f939ff9f</button></td>
+											<td>2021년도 서울시 테스트베드 서울 실증지원 사업 공고</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td><button type="button" class="gray_btn2">ddeeeee393f939ff9f</button></td>
+											<td>2021년도 서울시 테스트베드 서울 실증지원 사업 공고</td>
+										</tr>											
+									</tbody>									   
+								</table>
+								
+								<table class="list2 main_popup_write_table">
+									<caption>이메일</caption> 
+									<colgroup>
+									   <col style="width: 20%" />
+									   <col style="width: 30%" />
+									   <col style="width: 20%" />
+									   <col style="width: 30%" />
+									</colgroup>
+									
+									<tbody>	
+										<tr>
+											<th scope="row"><label for="write_popup_title">팝업제목</label></th>
+											<td colspan="3"><input type="text" class="form-control wp100" id="write_popup_title" /></td>			
+										</tr>
+										<tr>
+											<th scope="col"><label for="write_popup_w">팝업너비</label></th>											
+											<td><input type="number" class="form-control wp100" id="write_popup_w" /></td>
+											<th scope="col"><label for="write_popup_h">팝업높이</label></th>	
+											<td><input type="number" class="form-control wp100" id="write_popup_h" /></td>
+										</tr>										   
+										<tr>
+											<th scope="col"><label for="write_popup_attachimg">첨부이미지</label></th>									
+											<td colspan="3"></td>
+										</tr>
+										<tr>
+											<th scope="col"><label for="main_template_select">템플릿</label></th>											
+											<td colspan="3">
+												<select name="main_template_select" id="main_template_select" class="ace-select wp100">
+													<option value="0">선택하세요</option>										
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th scope="col" colspan="4"><label for="write_popup_txt">팝업내용작성</label></th>							
+										</tr>
+										<tr>
+											<td colspan="4">
+												<textarea name="write_popup_txt" id="write_popup_txt" class="form-control"></textarea>
+											</td>								
+										</tr>
+									</tbody>									   
+								</table>
+
+								<div class="clearfix mt10">							  
+								   <button type="button" class="blue_btn fr save_popup_write">저장</button>
+								</div>
+							</div>	
+
+							
+						</div>
+
+						
+						<!-- //팝업 -->
+					   
+					</div>				 
+					
+				</article>	
+				<!-- ..서브컨텐츠 -->
+			</section>
+			<!--// section -->
+		</div>
+
+		<script src="../js/script.js"></script>
+	</body>
+</html>
